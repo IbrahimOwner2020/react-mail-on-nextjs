@@ -1,8 +1,7 @@
 "use client";
-import { NextPage } from "next";
 import { useState } from "react";
 
-const HomePage: NextPage = () => {
+const HomePage = () => {
 	const [data, setData] = useState({
 		name: "",
 		email: "",
