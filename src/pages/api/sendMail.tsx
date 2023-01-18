@@ -12,12 +12,14 @@ const transporter = nodemailer.createTransport({
 	},
 });
 
-const emailHtml = render(<Email />);
-
 const sendMail = async (req: NextApiRequest, res: NextApiResponse) => {
+	const { email, name } = req.body;
+
+	const emailHtml = render(<Email name={name} />);
+
 	const mailOptions = {
-		from: "kidibra2020@gmail.com",
-		to: "johnibrahimfrank@gmail.com",
+		from: process.env.MAIL_USERNAME,
+		to: email as string,
 		subject: "Message from contact form",
 		html: emailHtml,
 	};

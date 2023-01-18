@@ -7,11 +7,15 @@ import { Text } from "@react-email/text";
 import { Container } from "@react-email/container";
 import { Link } from "@react-email/link";
 
-const Email: React.FC = () => {
+interface EmailInterface {
+	name: string;
+}
+
+const Email: React.FC<Readonly<EmailInterface>> = ({ name }) => {
 	return (
 		<Html>
 			<Head />
-			<Preview>Testing Email</Preview>
+			<Preview>Testing sending</Preview>
 			<Section
 				style={{
 					backgroundColor: "#fff",
@@ -29,16 +33,16 @@ const Email: React.FC = () => {
 							padding: "20px",
 						}}
 					>
-						Testing new thing
+						Testing sending email to : {name}
 					</Text>
 					<Link
 						style={{
 							textDecoration: "none",
 							color: "#ff0f00",
 						}}
-						href="https://safariwallet.com"
+						href="https://nextjs.org"
 					>
-						GO to safariwallet
+						GO to Nextjs page
 					</Link>
 				</Container>
 			</Section>
