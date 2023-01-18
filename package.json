@@ -11,6 +11,7 @@
 	},
 	"dependencies": {
 		"@next/font": "13.1.2",
+		"@picocss/pico": "^1.5.6",
 		"@react-email/button": "^0.0.5",
 		"@react-email/container": "^0.0.5",
 		"@react-email/head": "^0.0.3",

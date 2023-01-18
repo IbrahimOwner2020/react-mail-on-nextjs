@@ -1,4 +1,5 @@
-import "./globals.css";
+import "./pico.css";
+
 
 export default function RootLayout({
 	children,
